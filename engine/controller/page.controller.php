@@ -6,6 +6,10 @@ if($system == 1){
 
 	switch($page){
 		default:
+		case "home":
+			header("location: /public");
+		break;
+
 		case "info":
 			include "info.controller.php";
 		break;
