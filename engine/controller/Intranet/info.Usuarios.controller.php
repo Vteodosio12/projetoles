@@ -23,9 +23,9 @@ switch(url::GetUrl(2)) {
 	
 	case "usuarioNovo":
         if($_POST){			
-			$usuario = $_POST['usuario'];
-			$login = $_POST['login'];
-			$senha = $_POST['senha'];
+			$usuario = corrigeaspas($_POST['usuario']);
+			$login = corrigeaspas($_POST['login']);
+			$senha = corrigeaspas($_POST['senha']);
 			
             $query = $dbSite->query("INSERT into site_usuarios (nome, login, SenhaSite, inativo) values (UPPER('".$usuario."'),
 			UPPER('".$login."'),'".$senha."','F')");		
@@ -78,11 +78,11 @@ switch(url::GetUrl(2)) {
 	
 	case "usuarioEdita":
         if($_POST){			
-			$userid = $_POST['userid'];
-			$usuario = $_POST['usuario'];
-			$login = $_POST['login'];
-			$senha = $_POST['senha'];
-			$status = $_POST['status'];
+			$userid = corrigeaspas($_POST['userid']);
+			$usuario = corrigeaspas($_POST['usuario']);
+			$login = corrigeaspas($_POST['login']);
+			$senha = corrigeaspas($_POST['senha']);
+			$status = corrigeaspas($_POST['status']);
 			
             $query = $dbSite->query("UPDATE site_usuarios set 
 			nome = '".$usuario."', 

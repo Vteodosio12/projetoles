@@ -61,7 +61,7 @@ switch(url::GetUrl(2)) {
 	
 	case "editaLivro":
 	if($_POST){
-		$livroid = $_POST['livroid'];
+		$livroid = corrigeaspas($_POST['livroid']);
 		$nomelivro = corrigeaspas($_POST['nomelivro']);
 		
 		$query = $dbSite->query("UPDATE site_Agenda_Livros SET Descricao='".$nomelivro."'
@@ -88,7 +88,7 @@ switch(url::GetUrl(2)) {
 	
 	case "baixaLivro":
 	if($_POST){
-		$livroid = $_POST['livroid'];
+		$livroid = corrigeaspas($_POST['livroid']);
 		
 		$query = $dbSite->query("DELETE FROM site_Agenda_Livros 
 		WHERE LivroId='".$livroid."'");
@@ -130,7 +130,7 @@ switch(url::GetUrl(2)) {
 	
 	case 'editaConvenio':
 		if($_POST){
-			$convenioid = $_POST['convenioid'];
+			$convenioid = corrigeaspas($_POST['convenioid']);
 			$nomeconvenio = corrigeaspas($_POST['nomeconvenio']);
 			
 			$query = $dbSite->query("UPDATE site_Agenda_Convenios set Descricao='".$nomeconvenio."'
@@ -182,7 +182,7 @@ switch(url::GetUrl(2)) {
 	
 	case 'editaProcedimento':
 		if($_POST){
-			$procedimentoid = $_POST['procedimentoid'];
+			$procedimentoid = corrigeaspas($_POST['procedimentoid']);
 			$nomeprocedimento = corrigeaspas($_POST['nomeprocedimento']);
 			
 			$query = $dbSite->query("UPDATE site_Agenda_Procedimentos set Descricao='".$nomeprocedimento."'
