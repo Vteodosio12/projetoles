@@ -1,0 +1,103 @@
+
+
+body {
+    padding: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.navbar {
+    background-color: #00bc92;
+}
+
+.nav-item {
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#sysmile-logo {
+    width: 60%;
+}
+
+#carrossel .carousel-inner, #carrossel .carousel-item {
+    height: 90vh;
+    padding-bottom: 0;
+
+}
+
+#carrossel .carousel-caption {
+    height: 75vh;
+    padding-top: 10%;
+
+}
+
+.carousel-caption h5 {
+    padding-bottom: 5%;
+    font-size: 2.8vw;
+    color: #00bc92;
+    font-weight: 700;
+    -webkit-text-stroke: 1px #000000;
+}
+
+.carousel-caption p{
+    padding-bottom: 5%;
+    font-size: 2vw;
+    color: #ffffff;
+    font-weight: 700;
+    -webkit-text-stroke: 1px #000000;    
+}
+.main-btn {
+    color: #ffffff;
+    background-color: #00bc92;
+    text-transform: uppercase;
+    width: 10vw;
+    height: 10vh;
+    padding: .3em .3em;
+    font-size: 1vw;
+    border-radius: 1em ;
+    border: 0.2em solid transparent;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.main-btn:hover{
+    text-decoration: none;
+    color:  #00bc92;
+    background-color: rgba(255, 255, 255, 0.726);
+    border: 0.2em solid #00bc92;
+    font-weight: 600;
+
+}
+
+.carousel-indicators {
+    
+    bottom: 20px;
+}
+
+.carousel-indicators .active {
+    background-color: #00bc92;
+}
+
+#rodape p{
+    padding-bottom: 10px;
+    margin: 0;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+bottom: .5em;
+}
