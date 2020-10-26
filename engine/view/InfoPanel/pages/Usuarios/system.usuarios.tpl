@@ -8,7 +8,7 @@
 	<h1>Usuários</h1>
 	<div><a href="/info/usuarios/usuarios_novo" class="btn btn-sm btn-primary">Novo Usuario</a></div>
 	
-	<table class="sortable table table-hover table-stripped">
+	<table id="tabelaUsuario" class="table table-hover table-stripped">
 		<thead>
         <tr>
             <th>ID</th>

@@ -13,6 +13,10 @@
 <script src="/styles/js/sorttable.js"></script>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script type="text/javascript" src="/styles/js/bootstrap-slider.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript" scr="/styles/js/dataTable.js"></script>
 
 <!--<script type="text/javascript" src="/styles/js/info/moment.js"></script>
 <script type="text/javascript" src="/styles/js/angularjs/angular.min.js"></script>
