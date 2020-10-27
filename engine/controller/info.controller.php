@@ -80,5 +80,9 @@ switch($page){
     case "cadastros":
         include "Intranet/info.Cadastros.controller.php";
     break;
+
+    case "pacientes":
+        include "Intranet/info.Pacientes.controller.php";
+    break;
 }
 ?>

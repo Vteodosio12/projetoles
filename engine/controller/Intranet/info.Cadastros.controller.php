@@ -203,11 +203,10 @@ switch(url::GetUrl(2)) {
 	break;
 }
 
-function tiracaracterespecial($texto)
+function corrigeaspas($texto)
 	{
 		
 		$texto = strtoupper(str_replace("Ã", "A", $texto));
-		$texto = str_replace("'", "", $texto);
 		$texto = str_replace("À", "A", $texto);
 		$texto = str_replace("Á", "A", $texto);
 		$texto = str_replace("Â", "A", $texto);
@@ -240,10 +239,6 @@ function tiracaracterespecial($texto)
 		$texto = str_replace("ù", "U", $texto);
 		$texto = str_replace("ú", "U", $texto);
 		$texto = str_replace("ç", "C", $texto);
-		return $texto;
-	}
-	function corrigeaspas($texto)
-	{
 		$texto = str_replace("'", "", $texto);
 		return $texto;
 	}

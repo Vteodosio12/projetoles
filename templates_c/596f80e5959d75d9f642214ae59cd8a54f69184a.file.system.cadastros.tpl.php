@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2020-10-20 16:16:32
+<?php /* Smarty version Smarty-3.1.13, created on 2020-10-26 19:51:30
          compiled from "engine\view\InfoPanel\pages\Cadastros\system.cadastros.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:196085d375f9c4b21a2-00920429%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '596f80e5959d75d9f642214ae59cd8a54f69184a' => 
     array (
       0 => 'engine\\view\\InfoPanel\\pages\\Cadastros\\system.cadastros.tpl',
-      1 => 1603221388,
+      1 => 1603752630,
       2 => 'file',
     ),
   ),
@@ -51,7 +51,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<h1>Livros</h1>
 	<a href="/info/cadastros/agenda_livros_novo" class="btn btn-sm btn-primary">Novo Livro</a>
 	
-	<table class="sortable table table-hover table-stripped">
+	<table id="tabelaLivro" class="table table-hover table-stripped">
 		<thead>
         <tr>
             <th>Código</th>
@@ -83,7 +83,7 @@ $_smarty_tpl->tpl_vars['Livro']->_loop = true;
 	<h1>Convênios</h1>
 	<a href="/info/cadastros/agenda_convenios_novo" class="btn btn-sm btn-primary">Novo Convênio</a>
 	
-	<table class="sortable table table-hover table-stripped">
+	<table id="tabelaConvenio" class="table table-hover table-stripped">
 		<thead>
         <tr>
             <th>Código</th>
@@ -143,7 +143,7 @@ $_smarty_tpl->tpl_vars['Convenio']->_loop = true;
 	<h1>Procedimentos</h1>
 	<a href="/info/cadastros/agenda_procedimentos_novo" class="btn btn-sm btn-primary">Novo Procedimento</a>
 	
-	<table class="sortable table table-hover table-stripped">
+	<table id="tabelaProcedimento" class="table table-hover table-stripped">
 		<thead>
         <tr>
             <th>Código</th>

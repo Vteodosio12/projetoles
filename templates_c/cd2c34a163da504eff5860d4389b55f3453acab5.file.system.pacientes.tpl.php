@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2019-06-27 07:20:17
+<?php /* Smarty version Smarty-3.1.13, created on 2020-10-26 20:43:02
          compiled from "engine\view\InfoPanel\pages\Pacientes\system.pacientes.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:47515ccfa3bb5978d7-43850814%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cd2c34a163da504eff5860d4389b55f3453acab5' => 
     array (
       0 => 'engine\\view\\InfoPanel\\pages\\Pacientes\\system.pacientes.tpl',
-      1 => 1561603809,
+      1 => 1603755779,
       2 => 'file',
     ),
   ),
@@ -20,16 +20,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'status' => 0,
-    'PATH' => 0,
     'Pacientes' => 0,
     'Paciente' => 0,
     'contas' => 0,
     'conta' => 0,
+    'PATH' => 0,
     'pagina' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5ccfa3bb609008_26830559')) {function content_5ccfa3bb609008_26830559($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'C:\\xampp\\htdocs\\engine\\libs\\smarty\\plugins\\modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5ccfa3bb609008_26830559')) {function content_5ccfa3bb609008_26830559($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'C:\\xampp\\htdocs\\sysmile\\engine\\libs\\smarty\\plugins\\modifier.date_format.php';
 ?><?php echo $_smarty_tpl->getSubTemplate ("../../master/header2.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
@@ -45,21 +45,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<a href="/info/pacientes/paciente_novo" class="btn btn-sm btn-primary">Novo Paciente</a>
 	<br>
 	<br>
-	<form method="post" action="<?php echo $_smarty_tpl->tpl_vars['PATH']->value;?>
-/info/pacientes/PesquisaPaciente">
-		<div class="row">
-			<div class="col-lg-12">
-			<div class="input-group">
-			  <div id="a"><input type="text" name="pesquisa" class="form-control" placeholder="Procurar por..."></div>
-			  <span class="input-group-btn">
-				<button class="btn btn-default" type="submit">Pesquisar</button>
-			  </span>
-			</div>
-		  </div>
-		</div>
-	</form>
-
-	<table class="table table-hover table-stripped">
+	
+	<table id="tabelaPaciente" class="table table-hover table-stripped">
         <thead>
 		<tr>
             <th>Id</th>
@@ -83,8 +70,8 @@ $_smarty_tpl->tpl_vars['Paciente']->_loop = true;
 </td>
 			<td><a href="/info/pacientes/pacientes_ficha/<?php echo $_smarty_tpl->tpl_vars['Paciente']->value['PacienteId'];?>
 " class="btn btn-sm btn-primary">Acessar</a></td>
-			<td><a data-toggle="modal" data-target="#myModal<?php echo $_smarty_tpl->tpl_vars['Paciente']->value['PacienteId'];?>
-" href="" class="btn btn-sm btn-danger">Excluir</a></li></td>
+			<td><a href="/info/pacientes/paciente_excluir/<?php echo $_smarty_tpl->tpl_vars['Paciente']->value['PacienteId'];?>
+" class="btn btn-sm btn-danger">Excluir</a></td>
         </tr>
 		
 		<div class="modal fade" id="myModal<?php echo $_smarty_tpl->tpl_vars['Paciente']->value['PacienteId'];?>

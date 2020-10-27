@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2019-08-02 01:53:03
+<?php /* Smarty version Smarty-3.1.13, created on 2020-10-26 20:42:02
          compiled from "engine\view\InfoPanel\pages\Pacientes\system.pacientes_ficha.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:287845ccfa2a6cc2736-77483685%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ab28930a304917467058ee96247387fc10c67cf9' => 
     array (
       0 => 'engine\\view\\InfoPanel\\pages\\Pacientes\\system.pacientes_ficha.tpl',
-      1 => 1564721580,
+      1 => 1603754865,
       2 => 'file',
     ),
   ),
@@ -28,7 +28,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5ccfa2a6dd6f78_70335500')) {function content_5ccfa2a6dd6f78_70335500($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'C:\\xampp\\htdocs\\engine\\libs\\smarty\\plugins\\modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5ccfa2a6dd6f78_70335500')) {function content_5ccfa2a6dd6f78_70335500($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'C:\\xampp\\htdocs\\sysmile\\engine\\libs\\smarty\\plugins\\modifier.date_format.php';
 ?><?php echo $_smarty_tpl->getSubTemplate ("../../master/header2.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
@@ -50,8 +50,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['Paciente']->key => $_smarty_tpl->tpl_
 $_smarty_tpl->tpl_vars['Paciente']->_loop = true;
 ?>
 	<div><a href="/info/pacientes/pacientes_editar/<?php echo $_smarty_tpl->tpl_vars['Paciente']->value['PacienteId'];?>
-" class="btn btn-sm btn-primary">Editar Dados do Paciente</a> <a href="/info/pacientes/pacientes_imprimir/<?php echo $_smarty_tpl->tpl_vars['Paciente']->value['PacienteId'];?>
-" class="btn btn-sm btn-warning">Imprimir Ficha do Paciente</a></div>
+" class="btn btn-sm btn-primary">Editar Dados do Paciente</a></div>
 
 	<div class="row">
 		<div class="col-md-9">
@@ -62,8 +61,7 @@ $_smarty_tpl->tpl_vars['Paciente']->_loop = true;
 
 		<div class="col-md-3">
 			<h3>Data de Nascimento</h3>
-			<label><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['Paciente']->value['DataNasc'],"%d/%m/%Y");?>
-</label>
+			<label></label>
 		</div>
 	</div>
 	

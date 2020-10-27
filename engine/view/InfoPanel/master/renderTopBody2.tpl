@@ -6,6 +6,8 @@
         <ul class="dropdown-menu" role="menu">
 			<li><a href="/info/cadastros">Cadastros</a></li>
             <li class="divider"></li>
+            <li><a href="/info/pacientes">Pacientes</a></li>
+            <li class="divider"></li>
             <li><a href="/info/usuarios">Usuários</a></li>
             <li class="divider"></li>
             <li><a href="/info/changePass">Alterar Senha</a></li>
@@ -19,6 +21,7 @@
         <div class="col-md-2 left-menu visible-md visible-lg">
         <ul id="side-nav" class="side-nav">			
 			<li class="panel"><a href="/info/cadastros">Cadastros</a></li>
+			<li class="panel"><a href="/info/pacientes">Pacientes</a></li>
 			<li class="panel"><a href="/info/usuarios">Usuários</a></li>
             <li class="panel"><a href="/info/changePass">Alterar Senha</a></li>
             <li class="panel"><a href="/info/logout">Encerrar Sessão</a></li>

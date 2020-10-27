@@ -18,7 +18,7 @@
 	<h1>Livros</h1>
 	<a href="/info/cadastros/agenda_livros_novo" class="btn btn-sm btn-primary">Novo Livro</a>
 	
-	<table class="sortable table table-hover table-stripped">
+	<table id="tabelaLivro" class="table table-hover table-stripped">
 		<thead>
         <tr>
             <th>Código</th>
@@ -42,7 +42,7 @@
 	<h1>Convênios</h1>
 	<a href="/info/cadastros/agenda_convenios_novo" class="btn btn-sm btn-primary">Novo Convênio</a>
 	
-	<table class="sortable table table-hover table-stripped">
+	<table id="tabelaConvenio" class="table table-hover table-stripped">
 		<thead>
         <tr>
             <th>Código</th>
@@ -91,7 +91,7 @@
 	<h1>Procedimentos</h1>
 	<a href="/info/cadastros/agenda_procedimentos_novo" class="btn btn-sm btn-primary">Novo Procedimento</a>
 	
-	<table class="sortable table table-hover table-stripped">
+	<table id="tabelaProcedimento" class="table table-hover table-stripped">
 		<thead>
         <tr>
             <th>Código</th>

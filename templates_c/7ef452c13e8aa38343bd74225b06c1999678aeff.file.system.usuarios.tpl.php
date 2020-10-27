@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2020-10-20 15:45:59
+<?php /* Smarty version Smarty-3.1.13, created on 2020-10-26 13:18:22
          compiled from "engine\view\InfoPanel\pages\Usuarios\system.usuarios.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:53425cf95622a1b967-95464150%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7ef452c13e8aa38343bd74225b06c1999678aeff' => 
     array (
       0 => 'engine\\view\\InfoPanel\\pages\\Usuarios\\system.usuarios.tpl',
-      1 => 1603219556,
+      1 => 1603729078,
       2 => 'file',
     ),
   ),
@@ -37,7 +37,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<h1>Usuários</h1>
 	<div><a href="/info/usuarios/usuarios_novo" class="btn btn-sm btn-primary">Novo Usuario</a></div>
 	
-	<table class="sortable table table-hover table-stripped">
+	<table id="tabelaUsuario" class="table table-hover table-stripped">
 		<thead>
         <tr>
             <th>ID</th>

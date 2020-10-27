@@ -1,37 +1,8 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2020-10-26 20:41:31
-         compiled from "engine\view\InfoPanel\pages\Pacientes\system.pacientes_novo.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:109325cd017f4270ef7-61940761%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-$_valid = $_smarty_tpl->decodeProperties(array (
-  'file_dependency' => 
-  array (
-    '95117b0ce2a653c5c3e4fa60961df9aea2ba179f' => 
-    array (
-      0 => 'engine\\view\\InfoPanel\\pages\\Pacientes\\system.pacientes_novo.tpl',
-      1 => 1603754542,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '109325cd017f4270ef7-61940761',
-  'function' => 
-  array (
-  ),
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5cd017f42b3fc5_76454962',
-  'variables' => 
-  array (
-    'PATH' => 0,
-    'Convenios' => 0,
-    'Convenio' => 0,
-  ),
-  'has_nocache_code' => false,
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5cd017f42b3fc5_76454962')) {function content_5cd017f42b3fc5_76454962($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("../../master/header2.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+{include file="../../master/header2.tpl"}
 
+{include file="../../master/renderTopBody2.tpl"}
 
-<?php echo $_smarty_tpl->getSubTemplate ("../../master/renderTopBody2.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
-
-
+{literal}
 <script type="text/javascript" >
     
     function limpa_formulário_cep() {
@@ -100,13 +71,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     };
 
     </script>
-
+{/literal}
 
 <div class="step">
     <h1>Novo Paciente</h1>
 	
-	<form method="post" action="<?php echo $_smarty_tpl->tpl_vars['PATH']->value;?>
-/info/pacientes/pacienteNovo">
+	<form method="post" action="{$PATH}/info/pacientes/pacienteNovo">
 	
 		<label>Nome</label>
 		<input type="text" name="nomepaciente" class="form-control">
@@ -197,15 +167,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<label>Convênio</label>
 		<select name="convenioid" id="convenio" class="form-control">
 			<option value="">Selecionar</option>
-			<?php  $_smarty_tpl->tpl_vars['Convenio'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['Convenio']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['Convenios']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['Convenio']->key => $_smarty_tpl->tpl_vars['Convenio']->value){
-$_smarty_tpl->tpl_vars['Convenio']->_loop = true;
-?>
-				<option value="<?php echo $_smarty_tpl->tpl_vars['Convenio']->value['ConvenioId'];?>
-"><?php echo $_smarty_tpl->tpl_vars['Convenio']->value['Descricao'];?>
-</option>
-			<?php } ?>
+			{foreach $Convenios as $Convenio}
+				<option value="{$Convenio.ConvenioId}">{$Convenio.Descricao}</option>
+			{/foreach}
 		</select>
 		
 		<label>Número da Carteirinha</label>
@@ -227,8 +191,6 @@ $_smarty_tpl->tpl_vars['Convenio']->_loop = true;
 		</form>
 </div>
 
-<?php echo $_smarty_tpl->getSubTemplate ("../../master/renderBottomBody.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+{include file="../../master/renderBottomBody.tpl"}
 
-
-<?php echo $_smarty_tpl->getSubTemplate ("../../master/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-<?php }} ?>
+{include file="../../master/footer.tpl"}
