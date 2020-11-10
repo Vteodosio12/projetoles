@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2020-10-26 20:42:02
+<?php /* Smarty version Smarty-3.1.13, created on 2020-11-10 14:37:10
          compiled from "engine\view\InfoPanel\pages\Pacientes\system.pacientes_ficha.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:287845ccfa2a6cc2736-77483685%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ab28930a304917467058ee96247387fc10c67cf9' => 
     array (
       0 => 'engine\\view\\InfoPanel\\pages\\Pacientes\\system.pacientes_ficha.tpl',
-      1 => 1603754865,
+      1 => 1605029826,
       2 => 'file',
     ),
   ),
@@ -23,8 +23,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'Pacientes' => 0,
     'Paciente' => 0,
     'inf' => 0,
-    'Agendas' => 0,
-    'Agenda' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -61,7 +59,8 @@ $_smarty_tpl->tpl_vars['Paciente']->_loop = true;
 
 		<div class="col-md-3">
 			<h3>Data de Nascimento</h3>
-			<label></label>
+			<label><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['Paciente']->value['DataNasc'],"%d/%m/%Y");?>
+</label>
 		</div>
 	</div>
 	
@@ -168,65 +167,6 @@ $_smarty_tpl->tpl_vars['Paciente']->_loop = true;
 	</div>
 	
 	<?php } ?>
-	
-	<hr />
-	
-	<h1>Agendamentos</h1>
-	<div><a href="/info/pacientes/pacientes_novo_agendamento/<?php echo $_smarty_tpl->tpl_vars['Paciente']->value['PacienteId'];?>
-" class="btn btn-sm btn-primary">Novo Agendamento</a>
-	
-	<table class="table table-hover table-stripped">
-		<thead>
-        <tr>
-            <th>ID</th>
-            <th>Data</th>
-			<th>Hora</th>
-			<th>Livro</th>
-			<th>Procedimento</th>
-			<th>Status</th>
-			<th>Opções</th>
-        </tr>
-		</thead>
-		<?php  $_smarty_tpl->tpl_vars['Agenda'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['Agenda']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['Agendas']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['Agenda']->key => $_smarty_tpl->tpl_vars['Agenda']->value){
-$_smarty_tpl->tpl_vars['Agenda']->_loop = true;
-?>
-		<tr>
-			<td><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==4){?><font color="#04B486"><?php }?><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==5){?><font color="#F78181"><?php }?><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==6){?><font color="#FF5722"><?php }?><?php echo $_smarty_tpl->tpl_vars['Agenda']->value['Id'];?>
-<?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==4||$_smarty_tpl->tpl_vars['Agenda']->value['Status']==5||$_smarty_tpl->tpl_vars['Agenda']->value['Status']==6){?></font><?php }?></td>
-			<td><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==4){?><font color="#04B486"><?php }?><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==5){?><font color="#F78181"><?php }?><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==6){?><font color="#FF5722"><?php }?><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['Agenda']->value['Data'],"%d/%m/%Y");?>
-<?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==4||$_smarty_tpl->tpl_vars['Agenda']->value['Status']==5||$_smarty_tpl->tpl_vars['Agenda']->value['Status']==6){?></font><?php }?></td>
-			<td><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==4){?><font color="#04B486"><?php }?><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==5){?><font color="#F78181"><?php }?><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==6){?><font color="#FF5722"><?php }?><?php echo $_smarty_tpl->tpl_vars['Agenda']->value['Hora'];?>
-<?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==4||$_smarty_tpl->tpl_vars['Agenda']->value['Status']==5||$_smarty_tpl->tpl_vars['Agenda']->value['Status']==6){?></font><?php }?></td>
-			<td><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==4){?><font color="#04B486"><?php }?><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==5){?><font color="#F78181"><?php }?><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==6){?><font color="#FF5722"><?php }?><?php echo $_smarty_tpl->tpl_vars['Agenda']->value['Livro'];?>
-<?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==4||$_smarty_tpl->tpl_vars['Agenda']->value['Status']==5||$_smarty_tpl->tpl_vars['Agenda']->value['Status']==6){?></font><?php }?></td>
-			<td><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==4){?><font color="#04B486"><?php }?><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==5){?><font color="#F78181"><?php }?><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==6){?><font color="#FF5722"><?php }?><?php echo $_smarty_tpl->tpl_vars['Agenda']->value['Procedimento'];?>
-<?php if ($_smarty_tpl->tpl_vars['Agenda']->value['TipoLivro']==2){?> (<?php echo $_smarty_tpl->tpl_vars['Agenda']->value['SessaoId'];?>
-ª SESSAO)<?php }?><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==4||$_smarty_tpl->tpl_vars['Agenda']->value['Status']==5||$_smarty_tpl->tpl_vars['Agenda']->value['Status']==6){?></font><?php }?></td>
-			<td><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==4){?><font color="#04B486"><?php }?><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==5){?><font color="#F78181"><?php }?><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==6){?><font color="#FF5722"><?php }?><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==1){?>Agendado<?php }elseif($_smarty_tpl->tpl_vars['Agenda']->value['Status']==4){?>Compareceu<?php }elseif($_smarty_tpl->tpl_vars['Agenda']->value['Status']==5){?>Faltou<?php }elseif($_smarty_tpl->tpl_vars['Agenda']->value['Status']==6){?>Cancelou<?php }?><?php if ($_smarty_tpl->tpl_vars['Agenda']->value['Status']==4||$_smarty_tpl->tpl_vars['Agenda']->value['Status']==5||$_smarty_tpl->tpl_vars['Agenda']->value['Status']==6){?></font><?php }?></td>
-			<td><div class="dropdown">
-						  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-							Opções
-							<span class="caret"></span>
-						  </button>
-						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							<li><a href="/info/pacientes/cancelar_agendamento/<?php echo $_smarty_tpl->tpl_vars['Paciente']->value['PacienteId'];?>
-/<?php echo $_smarty_tpl->tpl_vars['Agenda']->value['Id'];?>
-">Cancelar</a></li>
-							<li><a href="/info/pacientes/duplicar_agendamento/<?php echo $_smarty_tpl->tpl_vars['Paciente']->value['PacienteId'];?>
-/<?php echo $_smarty_tpl->tpl_vars['Agenda']->value['Id'];?>
-">Duplicar</a></li>
-							<li><a href="/info/pacientes/transferir_agendamento/<?php echo $_smarty_tpl->tpl_vars['Paciente']->value['PacienteId'];?>
-/<?php echo $_smarty_tpl->tpl_vars['Agenda']->value['Id'];?>
-">Transferir</a></li>
-						  </ul>
-						</div>
-					</td>
-		</tr>
-		<?php } ?>
-	</table>
-	
 </div>
 	
 <?php echo $_smarty_tpl->getSubTemplate ("../../master/renderBottomBody.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

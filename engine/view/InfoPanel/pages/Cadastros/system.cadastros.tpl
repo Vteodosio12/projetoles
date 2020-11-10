@@ -25,12 +25,14 @@
 			<th>Descrição</th>
 			<th>Ações</th>
 			<th></th>
+			<th></th>
         </tr>
 		</thead>
 		{foreach $Livros as $Livro}
         <tr>
             <td>{$Livro.LivroId}</td>
 			<td>{$Livro.Descricao}</td>
+			<td><a href="/info/cadastros/agenda_livros_convenios/{$Livro.LivroId}" class="btn btn-sm btn-primary">Convênios</a></td>
 			<td><a href="/info/cadastros/agenda_livros_edita/{$Livro.LivroId}" class="btn btn-sm btn-primary">Editar</a></td>
 			<td><a href="/info/cadastros/agenda_livros_exclui/{$Livro.LivroId}" class="btn btn-sm btn-danger">Excluir</a></td>
         </tr>

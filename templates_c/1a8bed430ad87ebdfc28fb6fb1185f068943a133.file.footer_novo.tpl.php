@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2020-09-19 18:37:55
+<?php /* Smarty version Smarty-3.1.13, created on 2020-10-27 18:37:46
          compiled from "C:\xampp\htdocs\sysmile\engine\view\InfoPanel\master\footer_novo.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:205985f667a3372dbf5-19730945%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1a8bed430ad87ebdfc28fb6fb1185f068943a133' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sysmile\\engine\\view\\InfoPanel\\master\\footer_novo.tpl',
-      1 => 1561603799,
+      1 => 1603834662,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
   'unifunc' => 'content_5f667a33731a67_44865352',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5f667a33731a67_44865352')) {function content_5f667a33731a67_44865352($_smarty_tpl) {?><!-- Bootstrap core CSS     -->
     <link href="/styles/css/bootstrap.min.css" rel="stylesheet" />
@@ -26,9 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <link href="/styles/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
 
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="/styles/js/angularjs/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
-	
+    
 <script src="/styles/js/jquery.min.js" type="text/javascript"></script>
 <script src="/styles/js/jquery-ui.min.js" type="text/javascript"></script> 
 <script src="/styles/js/uploader/jquery.liteuploader.min.js" type="text/javascript"></script>
@@ -43,7 +41,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <script src="/styles/js/bootstrap-datetimepicker.js"></script>
 <script src="/styles/js/bootstrap-selectpicker.js"></script>
 <script src="/styles/js/bootstrap-checkbox-radio-switch-tags.js"></script>
-<script src="/styles/js/chartist.min.js"></script>
 <script src="/styles/js/bootstrap-notify.js"></script>
 <script src="/styles/js/sweetalert2.js"></script>
 <script src="/styles/js/jquery-jvectormap.js"></script>
@@ -54,13 +51,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <script src="/styles/js/light-bootstrap-dashboard.js"></script>
 <script src="/styles/js/demo.js"></script>
 <script src="/styles/js/jquery.sharrre.js"></script>
-
-
-<script src="/styles/js/angularjs/angular.min.js"></script>
-<script src="/styles/js/angularjs/angular-pt-br.js"></script>
-
-<script src="/styles/js/core.info.js"></script>
-<script type="text/javascript" src="/styles/js/info/core.js"></script>
 
 
 
@@ -75,7 +65,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         });
     </script>
 
-<script type="text/javascript" src="/styles/js/jquery.sumoselect.min.js"></script>	
+
 
 	
 	<script src="https://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>

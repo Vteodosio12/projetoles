@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2020-10-26 20:43:02
+<?php /* Smarty version Smarty-3.1.13, created on 2020-11-10 15:24:21
          compiled from "engine\view\InfoPanel\pages\Pacientes\system.pacientes.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:47515ccfa3bb5978d7-43850814%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cd2c34a163da504eff5860d4389b55f3453acab5' => 
     array (
       0 => 'engine\\view\\InfoPanel\\pages\\Pacientes\\system.pacientes.tpl',
-      1 => 1603755779,
+      1 => 1605032656,
       2 => 'file',
     ),
   ),
@@ -22,10 +22,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'status' => 0,
     'Pacientes' => 0,
     'Paciente' => 0,
-    'contas' => 0,
-    'conta' => 0,
-    'PATH' => 0,
-    'pagina' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -96,36 +92,6 @@ $_smarty_tpl->tpl_vars['Paciente']->_loop = true;
 		</div>
         <?php } ?>
     </table>
-	
-	<?php echo count($_smarty_tpl->tpl_vars['Pacientes']->value);?>
- Resultados Apresentados
-	
-	<?php  $_smarty_tpl->tpl_vars['conta'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['conta']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['contas']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['conta']->key => $_smarty_tpl->tpl_vars['conta']->value){
-$_smarty_tpl->tpl_vars['conta']->_loop = true;
-?><?php } ?>
-	
-	<?php if ($_smarty_tpl->tpl_vars['conta']->value['conta']!=''){?>
-	<p align="center"> 	
-		<center><form method="post" action="<?php echo $_smarty_tpl->tpl_vars['PATH']->value;?>
-/info/pacientes/MudaPagina">
-			<?php if ($_smarty_tpl->tpl_vars['pagina']->value!=1){?><a href="/info/pacientes/<?php echo $_smarty_tpl->tpl_vars['pagina']->value-1;?>
-" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-chevron-left"></i></a><?php }?>
-			1 <input type="text" name="pagina" size="4" value="<?php echo $_smarty_tpl->tpl_vars['pagina']->value;?>
-"> <?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['conta']->value['conta'];?>
-<?php $_tmp1=ob_get_clean();?><?php echo ceil($_tmp1);?>
-
-			<?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['conta']->value['conta'];?>
-<?php $_tmp2=ob_get_clean();?><?php if ($_smarty_tpl->tpl_vars['pagina']->value!=ceil($_tmp2)){?><a href="/info/pacientes/<?php echo $_smarty_tpl->tpl_vars['pagina']->value+1;?>
-" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-chevron-right"></i></a><?php }?>
-			<div class="helper-display-none">
-				<button type="submit" class="btn btn-default">Ir</button>
-			</div>
-			</form>
-		</center>
-	</p>
-	<?php }?>
 </div>
 
 

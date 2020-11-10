@@ -3,7 +3,7 @@
 switch(url::GetUrl(2)) {
 	default:
 	case "cadastros":	
-		$status = url::GetURL(3);
+		$status = url::GetURL(2);
 		$tpl->assign("status", $status);
 		
 		$query = $dbSite->query("SELECT LivroId, Descricao FROM site_Agenda_Livros ORDER BY Descricao");
@@ -201,6 +201,90 @@ switch(url::GetUrl(2)) {
 	
 		header("location: /info/cadastros/agenda_livros/9");
 	break;
+
+	case "agenda_livros_procedimentos":
+		$livroid = url::GetURL(3);
+		$tpl->assign("livroid", $livroid);
+		
+		$query = $dbSite->query("SELECT a.ProcedimentoId, a.Descricao, b.Id
+								FROM site_Agenda_Procedimentos a
+								full join site_Agenda_Livros_Procedimentos b on a.ProcedimentoId = b.ProcedimentoId and b.LivroId='".$livroid."'
+								ORDER BY a.Descricao");
+        $returnProcedimentos = $dbSite->fetch_array();
+        
+        $tpl->assign(array(
+            "Procedimentos"     => $returnProcedimentos,
+        ));
+		
+		$query = $dbSite->query("SELECT LivroId, Descricao
+								FROM site_Agenda_Livros
+								where LivroId='".$livroid."'
+								ORDER BY Descricao");
+        $returnLivros = $dbSite->fetch_array();
+        
+        $tpl->assign(array(
+            "Livros"     => $returnLivros,
+        ));
+
+		$tpl->display("engine/view/InfoPanel/pages/Cadastros/system.agenda_livros_procedimentos.tpl");
+	break;
+	
+	case 'vinculoLivroProcedimento':
+		if($_POST){
+			$livroid = $_POST['livroid'];
+			
+			$query = $dbSite->query("DELETE FROM site_Agenda_Livros_Procedimentos where LivroId='".$livroid."'");
+			foreach($_POST['option'] as $value){
+				$query = $dbSite->query("INSERT INTO site_Agenda_Livros_Procedimentos (LivroId,ProcedimentoId) VALUES ('".$livroid."','".$value."')");
+			}
+			header("location: /info/cadastros/10");
+		}else{
+			header("location: /home");
+		}
+	break;
+
+	case "agenda_livros_convenios":
+		$livroid = url::GetURL(3);
+		$tpl->assign("livroid", $livroid);
+		
+		$query = $dbSite->query("SELECT a.ConvenioId, a.Descricao, b.Id
+								FROM site_Agenda_Convenios a
+								full join site_Agenda_Livros_Convenios b on a.ConvenioId = b.ConvenioId and b.LivroId='".$livroid."'
+								where a.Convenioid is NOT NULL
+								ORDER BY a.Descricao");
+        $returnConvenios = $dbSite->fetch_array();
+        
+        $tpl->assign(array(
+            "Convenios"     => $returnConvenios,
+        ));
+		
+		$query = $dbSite->query("SELECT LivroId, Descricao
+								FROM site_Agenda_Livros
+								where LivroId='".$livroid."'
+								ORDER BY Descricao");
+        $returnLivros = $dbSite->fetch_array();
+        
+        $tpl->assign(array(
+            "Livros"     => $returnLivros,
+        ));
+
+		$tpl->display("engine/view/InfoPanel/pages/Cadastros/system.agenda_livros_convenios.tpl");
+	break;
+	
+	case 'vinculoLivroConvenio':
+		if($_POST){
+			$livroid = $_POST['livroid'];
+			
+			$query = $dbSite->query("DELETE FROM site_Agenda_Livros_Convenios where LivroId='".$livroid."'");
+			foreach($_POST['option'] as $value){
+				$query = $dbSite->query("INSERT INTO site_Agenda_Livros_Convenios (LivroId,ConvenioId) VALUES ('".$livroid."','".$value."')");
+			}
+			header("location: /info/cadastros/6");
+		}else{
+			header("location: /home");
+		}
+	break;
+	
 }
 
 function corrigeaspas($texto)

@@ -8,6 +8,10 @@
             <li class="divider"></li>
             <li><a href="/info/pacientes">Pacientes</a></li>
             <li class="divider"></li>
+            <li><a href="/info/agenda">Agenda</a></li>
+            <li class="divider"></li>
+            <li><a href="/info/orcamento">Orçamentos</a></li>
+            <li class="divider"></li>
             <li><a href="/info/usuarios">Usuários</a></li>
             <li class="divider"></li>
             <li><a href="/info/changePass">Alterar Senha</a></li>
@@ -22,6 +26,8 @@
         <ul id="side-nav" class="side-nav">			
 			<li class="panel"><a href="/info/cadastros">Cadastros</a></li>
 			<li class="panel"><a href="/info/pacientes">Pacientes</a></li>
+			<li class="panel"><a href="/info/agenda">Agenda</a></li>
+            <li class="panel"><a href="/info/orcamento">Orçamentos</a></li>
 			<li class="panel"><a href="/info/usuarios">Usuários</a></li>
             <li class="panel"><a href="/info/changePass">Alterar Senha</a></li>
             <li class="panel"><a href="/info/logout">Encerrar Sessão</a></li>

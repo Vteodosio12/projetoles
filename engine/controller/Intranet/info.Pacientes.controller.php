@@ -281,7 +281,7 @@ switch(url::GetUrl(2)) {
 		$query = $dbSite->query("SELECT a.* , b.Descricao
 								FROM site_Pacientes a
 								LEFT JOIN site_Agenda_Convenios b on a.Convenio = b.ConvenioId
-								WHERE a.Empresa='".$inf->login."' and a.PacienteId='".$pacienteid."' order by a.NomePaciente");
+								WHERE a.PacienteId='".$pacienteid."' order by a.NomePaciente");
 		$returnPacientes = $dbSite->fetch_array();
         
         $tpl->assign(array(
@@ -481,7 +481,7 @@ switch(url::GetUrl(2)) {
 		  }
 		  
 		  if($Agendamentos != 0){
-			header("location: /info/pacientes/1/2");
+			header("location: /info/pacientes/2");
 		}else{
 			$query = $dbSite->query("DELETE FROM site_Pacientes WHERE PacienteId='".$pacienteid."'");
 			header("location: /info/pacientes/1/1");
@@ -553,7 +553,7 @@ switch(url::GetUrl(2)) {
 			//==============================================================
 			//==============================================================
 
-			include("C:/Xampp/htdocs/datasantos/engine/libs/mpdf60/mpdf.php");
+			include("C:/Xampp/htdocs/sysmile/engine/libs/mpdf60/mpdf.php");
 			
 			$mpdf=new mPDF('c','A4','','',5,5,32,5,10,10); 
 			

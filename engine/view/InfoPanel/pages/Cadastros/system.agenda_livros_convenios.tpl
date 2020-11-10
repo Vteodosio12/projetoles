@@ -9,7 +9,7 @@
 	
 	<label>Selecione os Convênios aceitos por este livro:</label>
 	
-	<form method="post" action="{$PATH}/info/agenda/vinculoLivroConvenio">
+	<form method="post" action="{$PATH}/info/cadastros/vinculoLivroConvenio">
 	
 	<div class="helper-display-none">
 		<input type="text" name="livroid" class="form-control" value="{$livroid}">
@@ -18,8 +18,7 @@
 	<div class="row">
 		{foreach $Convenios as $Conv}
 				<div class="col-md-6">
-					<input type="checkbox" name="option[{$Conv.ConvenioId}]" value="{$Conv.ConvenioId}" {if $Conv.Id !=NULL}checked{/if}>
-					<label>{$Conv.Descricao}</label>
+					<label><input type="checkbox" name="option[{$Conv.ConvenioId}]" value="{$Conv.ConvenioId}" {if $Conv.Id !=NULL}checked{/if}> {$Conv.Descricao}</label>
 				</div>
 		{/foreach}
     </div>

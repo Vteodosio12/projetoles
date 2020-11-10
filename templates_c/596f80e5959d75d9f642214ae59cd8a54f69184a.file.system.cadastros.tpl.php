@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2020-10-26 19:51:30
+<?php /* Smarty version Smarty-3.1.13, created on 2020-10-27 18:49:11
          compiled from "engine\view\InfoPanel\pages\Cadastros\system.cadastros.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:196085d375f9c4b21a2-00920429%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '596f80e5959d75d9f642214ae59cd8a54f69184a' => 
     array (
       0 => 'engine\\view\\InfoPanel\\pages\\Cadastros\\system.cadastros.tpl',
-      1 => 1603752630,
+      1 => 1603835348,
       2 => 'file',
     ),
   ),
@@ -58,6 +58,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<th>Descrição</th>
 			<th>Ações</th>
 			<th></th>
+			<th></th>
         </tr>
 		</thead>
 		<?php  $_smarty_tpl->tpl_vars['Livro'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['Livro']->_loop = false;
@@ -70,6 +71,8 @@ $_smarty_tpl->tpl_vars['Livro']->_loop = true;
 </td>
 			<td><?php echo $_smarty_tpl->tpl_vars['Livro']->value['Descricao'];?>
 </td>
+			<td><a href="/info/cadastros/agenda_livros_convenios/<?php echo $_smarty_tpl->tpl_vars['Livro']->value['LivroId'];?>
+" class="btn btn-sm btn-primary">Convênios</a></td>
 			<td><a href="/info/cadastros/agenda_livros_edita/<?php echo $_smarty_tpl->tpl_vars['Livro']->value['LivroId'];?>
 " class="btn btn-sm btn-primary">Editar</a></td>
 			<td><a href="/info/cadastros/agenda_livros_exclui/<?php echo $_smarty_tpl->tpl_vars['Livro']->value['LivroId'];?>

@@ -5,9 +5,7 @@
     <link href="/styles/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
 
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="/styles/js/angularjs/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
-	
+    
 <script src="/styles/js/jquery.min.js" type="text/javascript"></script>
 <script src="/styles/js/jquery-ui.min.js" type="text/javascript"></script> 
 <script src="/styles/js/uploader/jquery.liteuploader.min.js" type="text/javascript"></script>
@@ -22,7 +20,6 @@
 <script src="/styles/js/bootstrap-datetimepicker.js"></script>
 <script src="/styles/js/bootstrap-selectpicker.js"></script>
 <script src="/styles/js/bootstrap-checkbox-radio-switch-tags.js"></script>
-<script src="/styles/js/chartist.min.js"></script>
 <script src="/styles/js/bootstrap-notify.js"></script>
 <script src="/styles/js/sweetalert2.js"></script>
 <script src="/styles/js/jquery-jvectormap.js"></script>
@@ -33,13 +30,6 @@
 <script src="/styles/js/light-bootstrap-dashboard.js"></script>
 <script src="/styles/js/demo.js"></script>
 <script src="/styles/js/jquery.sharrre.js"></script>
-
-
-<script src="/styles/js/angularjs/angular.min.js"></script>
-<script src="/styles/js/angularjs/angular-pt-br.js"></script>
-
-<script src="/styles/js/core.info.js"></script>
-<script type="text/javascript" src="/styles/js/info/core.js"></script>
 
 
 
@@ -54,7 +44,7 @@
         });
     </script>
 
-<script type="text/javascript" src="/styles/js/jquery.sumoselect.min.js"></script>	
+
 
 	
 	<script src="https://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>

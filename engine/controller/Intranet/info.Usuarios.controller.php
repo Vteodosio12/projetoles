@@ -41,14 +41,6 @@ switch(url::GetUrl(2)) {
 	case "usuarios_ficha":
 			$usuarioid = url::GetURL(3);
 			$status = url::GetURL(4);
-            
-			if(is_numeric($status)){
-				
-			}else{
-				$pesquisa = $status;
-				$pesquisa = str_replace("%20", " ", $pesquisa);
-				$pesquisanome = str_replace(" ", "%' AND nome like '%", tiracaracterespecial($pesquisa));
-			}
 		
 			$query = $dbSite->query("SELECT userid, nome, LOGIN, inativo, senhasite
 								FROM site_usuarios

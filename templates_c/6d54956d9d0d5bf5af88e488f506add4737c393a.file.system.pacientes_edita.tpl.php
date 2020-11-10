@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2020-10-26 20:24:00
+<?php /* Smarty version Smarty-3.1.13, created on 2020-10-27 19:20:58
          compiled from "engine\view\InfoPanel\pages\Pacientes\system.pacientes_edita.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:33795cd00bf18c0f59-20415049%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6d54956d9d0d5bf5af88e488f506add4737c393a' => 
     array (
       0 => 'engine\\view\\InfoPanel\\pages\\Pacientes\\system.pacientes_edita.tpl',
-      1 => 1603754522,
+      1 => 1603837252,
       2 => 'file',
     ),
   ),
@@ -27,7 +27,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5cd00bf19bfec0_43342658')) {function content_5cd00bf19bfec0_43342658($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("../../master/header2.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_5cd00bf19bfec0_43342658')) {function content_5cd00bf19bfec0_43342658($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'C:\\xampp\\htdocs\\sysmile\\engine\\libs\\smarty\\plugins\\modifier.date_format.php';
+?><?php echo $_smarty_tpl->getSubTemplate ("../../master/header2.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
 <?php echo $_smarty_tpl->getSubTemplate ("../../master/renderTopBody2.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
@@ -124,7 +125,8 @@ $_smarty_tpl->tpl_vars['Paciente']->_loop = true;
 ">
 		
 		<label>Data de Nascimento</label>
-		<input type="text" name="datanasc" id="data" class="form-control" value="">
+		<input type="text" name="datanasc" id="data" class="form-control" value="<?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['Paciente']->value['DataNasc'],"%d/%m/%Y");?>
+">
 		
 		<label>Sexo</label>
 		<select name="sexo" class="form-control">

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2020-10-26 19:58:12
+<?php /* Smarty version Smarty-3.1.13, created on 2020-11-10 15:17:55
          compiled from "C:\xampp\htdocs\sysmile\engine\view\InfoPanel\master\renderTopBody2.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:61145f7c9bdece3484-58361786%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4ff16a867f68e4841b85a259f0c74e6b6289acc2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sysmile\\engine\\view\\InfoPanel\\master\\renderTopBody2.tpl',
-      1 => 1603753064,
+      1 => 1605031897,
       2 => 'file',
     ),
   ),
@@ -34,6 +34,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <li class="divider"></li>
             <li><a href="/info/pacientes">Pacientes</a></li>
             <li class="divider"></li>
+            <li><a href="/info/agenda">Agenda</a></li>
+            <li class="divider"></li>
+            <li><a href="/info/orcamento">Orçamentos</a></li>
+            <li class="divider"></li>
             <li><a href="/info/usuarios">Usuários</a></li>
             <li class="divider"></li>
             <li><a href="/info/changePass">Alterar Senha</a></li>
@@ -48,6 +52,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <ul id="side-nav" class="side-nav">			
 			<li class="panel"><a href="/info/cadastros">Cadastros</a></li>
 			<li class="panel"><a href="/info/pacientes">Pacientes</a></li>
+			<li class="panel"><a href="/info/agenda">Agenda</a></li>
+            <li class="panel"><a href="/info/orcamento">Orçamentos</a></li>
 			<li class="panel"><a href="/info/usuarios">Usuários</a></li>
             <li class="panel"><a href="/info/changePass">Alterar Senha</a></li>
             <li class="panel"><a href="/info/logout">Encerrar Sessão</a></li>

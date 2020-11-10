@@ -18,3 +18,7 @@ $(document).ready(function () {
     $('#tabelaPaciente').DataTable();
     $('.dataTables_length').addClass('bs-select');
     });
+$(document).ready(function () {
+    $('#tabelaOrcamento').DataTable();
+    $('.dataTables_length').addClass('bs-select');
+    });

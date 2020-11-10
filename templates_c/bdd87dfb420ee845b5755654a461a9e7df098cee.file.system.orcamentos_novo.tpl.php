@@ -1,44 +1,36 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2020-11-10 17:49:37
-         compiled from "engine\view\InfoPanel\pages\Agenda\system.agenda_agendamento.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:272055cd01812c04a33-32764160%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2020-11-10 16:55:38
+         compiled from "engine\view\InfoPanel\pages\Orcamentos\system.orcamentos_novo.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:174765faae00cdbb183-62454914%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '5c95dbe9fb398d3983ed7901999a8d72d5434c50' => 
+    'bdd87dfb420ee845b5755654a461a9e7df098cee' => 
     array (
-      0 => 'engine\\view\\InfoPanel\\pages\\Agenda\\system.agenda_agendamento.tpl',
-      1 => 1605041319,
+      0 => 'engine\\view\\InfoPanel\\pages\\Orcamentos\\system.orcamentos_novo.tpl',
+      1 => 1605038116,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '272055cd01812c04a33-32764160',
+  'nocache_hash' => '174765faae00cdbb183-62454914',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_5cd01812c7fb86_90728201',
+  'unifunc' => 'content_5faae00ce3c5c0_43700792',
   'variables' => 
   array (
     'DadosPaciente' => 0,
-    'Livros' => 0,
-    'Horas' => 0,
-    'Livro' => 0,
-    'dia' => 0,
-    'mes' => 0,
-    'ano' => 0,
-    'Hora' => 0,
     'PATH' => 0,
-    'livroid' => 0,
-    'horreqid' => 0,
     'DadoPaciente' => 0,
+    'orcamentoid' => 0,
     'procedimentos' => 0,
-    'procedimento' => 0,
-    'convenios' => 0,
-    'convenio' => 0,
+    'proc' => 0,
+    'procedimentosorcados' => 0,
+    'ord' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5cd01812c7fb86_90728201')) {function content_5cd01812c7fb86_90728201($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'C:\\xampp\\htdocs\\sysmile\\engine\\libs\\smarty\\plugins\\modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5faae00ce3c5c0_43700792')) {function content_5faae00ce3c5c0_43700792($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'C:\\xampp\\htdocs\\sysmile\\engine\\libs\\smarty\\plugins\\modifier.date_format.php';
 ?><!DOCTYPE HTML>
 <html>
 <head>
@@ -77,46 +69,23 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php echo $_smarty_tpl->getSubTemplate ("../../master/renderTopBody2.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
-<div class="step">
 <?php  $_smarty_tpl->tpl_vars['DadoPaciente'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['DadoPaciente']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['DadosPaciente']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['DadoPaciente']->key => $_smarty_tpl->tpl_vars['DadoPaciente']->value){
 $_smarty_tpl->tpl_vars['DadoPaciente']->_loop = true;
 ?><?php } ?>
-<?php  $_smarty_tpl->tpl_vars['Livro'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['Livro']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['Livros']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['Livro']->key => $_smarty_tpl->tpl_vars['Livro']->value){
-$_smarty_tpl->tpl_vars['Livro']->_loop = true;
-?><?php } ?>
-<?php  $_smarty_tpl->tpl_vars['Hora'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['Hora']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['Horas']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['Hora']->key => $_smarty_tpl->tpl_vars['Hora']->value){
-$_smarty_tpl->tpl_vars['Hora']->_loop = true;
-?><?php } ?>
 
-	<h1>Cadastro de Agendamento</h1>
-	<h4><?php echo $_smarty_tpl->tpl_vars['Livro']->value['Descricao'];?>
- - <?php echo $_smarty_tpl->tpl_vars['dia']->value;?>
-/<?php echo $_smarty_tpl->tpl_vars['mes']->value;?>
-/<?php echo $_smarty_tpl->tpl_vars['ano']->value;?>
- - <?php echo $_smarty_tpl->tpl_vars['Hora']->value['Hora'];?>
-</h4>
+<div class="step">
+
+	<h1>Cadastro de Orçamentos</h1>
 
 	<form method="post" data-toggle="validator" action="<?php echo $_smarty_tpl->tpl_vars['PATH']->value;?>
-/info/agenda/novoAgendamento">
+/info/orcamento/novoOrcamento">
 		
         <div class="helper-display-none">
-            <input type="text" name="livroid" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['livroid']->value;?>
-">
-            <input type="text" name="dia" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['dia']->value;?>
-">
-			<input type="text" name="mes" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['mes']->value;?>
-">
-			<input type="text" name="ano" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ano']->value;?>
-">
-			<input type="text" name="horreqid" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['horreqid']->value;?>
-">
 			<input type="text" name="PacienteId" class="form-control" id="PacienteId" value="<?php echo $_smarty_tpl->tpl_vars['DadoPaciente']->value['PacienteId'];?>
+">
+			<input type="text" name="OrcamentoId" class="form-control" id="OrcamentoId" value="<?php echo $_smarty_tpl->tpl_vars['orcamentoid']->value;?>
 ">
         </div>
 	
@@ -147,42 +116,32 @@ $_smarty_tpl->tpl_vars['Hora']->_loop = true;
 		</div>
 		
 		<div class="form-group">
-			<label>Procedimento</label>
-			<span><select name="Procedimento" id="Procedimento" class="form-control" data-error="Informe o Procedimento a ser realizado." required>
-				<option value="">Selecionar</option>
-					<?php  $_smarty_tpl->tpl_vars['procedimento'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['procedimento']->_loop = false;
+			<label>Procedimentos</label>
+			
+			<div class="row">
+				<?php  $_smarty_tpl->tpl_vars['proc'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['proc']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['procedimentos']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['procedimento']->key => $_smarty_tpl->tpl_vars['procedimento']->value){
-$_smarty_tpl->tpl_vars['procedimento']->_loop = true;
+foreach ($_from as $_smarty_tpl->tpl_vars['proc']->key => $_smarty_tpl->tpl_vars['proc']->value){
+$_smarty_tpl->tpl_vars['proc']->_loop = true;
 ?>
-						<option value="<?php echo $_smarty_tpl->tpl_vars['procedimento']->value['ProcedimentoId'];?>
-" <?php if ($_smarty_tpl->tpl_vars['procedimento']->value['ProcedimentoId']==$_smarty_tpl->tpl_vars['DadoPaciente']->value['Exame']){?>Selected <?php }?>><?php echo $_smarty_tpl->tpl_vars['procedimento']->value['Descricao'];?>
-</option>
-					<?php } ?>
-			</select>
+						<div class="col-md-6">
+							<label><input type="checkbox" name="option[<?php echo $_smarty_tpl->tpl_vars['proc']->value['ProcedimentoId'];?>
+]" value="<?php echo $_smarty_tpl->tpl_vars['proc']->value['ProcedimentoId'];?>
+" <?php  $_smarty_tpl->tpl_vars['ord'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ord']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['procedimentosorcados']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['ord']->key => $_smarty_tpl->tpl_vars['ord']->value){
+$_smarty_tpl->tpl_vars['ord']->_loop = true;
+?><?php if ($_smarty_tpl->tpl_vars['ord']->value['ProcedimentoId']==$_smarty_tpl->tpl_vars['proc']->value['ProcedimentoId']){?>checked<?php }?><?php } ?>> <?php echo $_smarty_tpl->tpl_vars['proc']->value['Descricao'];?>
+</label>
+						</div>
+				<?php } ?>
+			</div>
 		</div>
 		
 		<div class="form-group">
-			<label>Convênio</label>
-			<select name="Convenio" class="form-control" id="Convenio" data-error="Informe o Convênio." required>
-				<option value="">Selecionar</option>
-					<?php  $_smarty_tpl->tpl_vars['convenio'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['convenio']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['convenios']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['convenio']->key => $_smarty_tpl->tpl_vars['convenio']->value){
-$_smarty_tpl->tpl_vars['convenio']->_loop = true;
-?>
-						<option value="<?php echo $_smarty_tpl->tpl_vars['convenio']->value['ConvenioId'];?>
-" <?php if ($_smarty_tpl->tpl_vars['convenio']->value['ConvenioId']==$_smarty_tpl->tpl_vars['DadoPaciente']->value['Convenio']){?>Selected<?php }?>><?php echo $_smarty_tpl->tpl_vars['convenio']->value['Descricao'];?>
-</option>
-					<?php } ?>
-			</select>
-			<div class="help-block with-errors"></div>
-		</div>
-		
-		<div class="form-group">
-			<label>Observações</label>
-			<textarea name="Observacoes" id="Observacoes" class="form-control"><?php echo $_smarty_tpl->tpl_vars['DadoPaciente']->value['Observacoes'];?>
-</textarea>
+			<label>Valor</label>
+			<input type="text" name="Valor" id="valor" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['DadoPaciente']->value['Valor'];?>
+">
 		</div>
 		
         <button type="submit" class="btn btn-default">Salvar</button>
@@ -210,8 +169,7 @@ $_smarty_tpl->tpl_vars['convenio']->_loop = true;
           return;
         }
  
-		$.getJSON( "/info/agenda/getDadosPaciente",  {PesquisaPaciente : $('#nomepaciente').val(), LivroId : <?php echo $_smarty_tpl->tpl_vars['livroid']->value;?>
-}, function( data, status, xhr ) {
+		$.getJSON( "/info/orcamento/getDadosPaciente",  {PesquisaPaciente : $('#nomepaciente').val()}, function( data, status, xhr ) {
           cache[ term ] = data;
           response( data );
         });
@@ -230,6 +188,12 @@ $_smarty_tpl->tpl_vars['convenio']->_loop = true;
 
 	<script language="javascript">
 		document.getElementById('nomepaciente').focus();
+	</script>
+
+	<script>
+		$(function() {
+			$('#valor').maskMoney();
+		})
 	</script>
 
 

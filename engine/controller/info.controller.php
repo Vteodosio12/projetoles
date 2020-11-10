@@ -84,5 +84,13 @@ switch($page){
     case "pacientes":
         include "Intranet/info.Pacientes.controller.php";
     break;
+
+    case "agenda":
+        include "Intranet/info.Agenda.controller.php";
+    break;
+
+    case "orcamento":
+        include "Intranet/info.Orcamento.controller.php";
+    break;
 }
 ?>

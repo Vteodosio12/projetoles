@@ -86,7 +86,7 @@
 		<input type="text" name="nome" class="form-control" value="{$Paciente.NomePaciente}">
 		
 		<label>Data de Nascimento</label>
-		<input type="text" name="datanasc" id="data" class="form-control" value="">
+		<input type="text" name="datanasc" id="data" class="form-control" value="{$Paciente.DataNasc|date_format:"%d/%m/%Y"}">
 		
 		<label>Sexo</label>
 		<select name="sexo" class="form-control">

@@ -50,24 +50,6 @@
 		</div>
         {/foreach}
     </table>
-	
-	{count($Pacientes)} Resultados Apresentados
-	
-	{foreach $contas as $conta}{/foreach}
-	
-	{if $conta.conta != ""}
-	<p align="center"> 	
-		<center><form method="post" action="{$PATH}/info/pacientes/MudaPagina">
-			{if $pagina != 1}<a href="/info/pacientes/{$pagina - 1}" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-chevron-left"></i></a>{/if}
-			1 <input type="text" name="pagina" size="4" value="{$pagina}"> {ceil({$conta.conta})}
-			{if $pagina != ceil({$conta.conta})}<a href="/info/pacientes/{$pagina + 1}" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-chevron-right"></i></a>{/if}
-			<div class="helper-display-none">
-				<button type="submit" class="btn btn-default">Ir</button>
-			</div>
-			</form>
-		</center>
-	</p>
-	{/if}
 </div>
 
 
